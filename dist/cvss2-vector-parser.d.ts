@@ -1,4 +1,5 @@
 import { CvssScore } from "./cvss-score";
+import { Cvss2ScoringEngine } from "./cvss2-scoring-engine";
 import { CvssVectorParser } from "./cvss-vector-parser";
 /**
  * Implements a service offering CVSS v2 vector parsing.
@@ -80,6 +81,13 @@ export declare class Cvss2VectorParser implements CvssVectorParser {
      * @returns the converted enum value
      */
     private static parseImpactSubscore;
+    /**
+     * Generates and returns a version-specific (CVSS v2) scoring engine loaded with a vector.
+     *
+     * @param vector the vector to load in to the scoring engine
+     * @returns the loaded scoring engine
+     */
+    generateScoringEngine(vector: string): Cvss2ScoringEngine;
     /**
      * @inheritdoc
      */

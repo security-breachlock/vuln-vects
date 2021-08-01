@@ -166,7 +166,7 @@ var Cvss2VectorMocker = /** @class */ (function (_super) {
      * @returns a randomly-initialized CVSS v2 scoring engine
      */
     Cvss2VectorMocker.prototype.generate = function () {
-        // Base metrics must also be included
+        // Base metrics must be included
         var scoringEngine = new cvss2_scoring_engine_1.Cvss2ScoringEngine();
         scoringEngine.accessVector = Cvss2VectorMocker.getRandomAccessVector();
         scoringEngine.accessComplexity = Cvss2VectorMocker.getRandomAccessComplexity();

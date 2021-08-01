@@ -210,9 +210,12 @@ var Cvss2VectorParser = /** @class */ (function () {
         throw new RangeError("Invalid CVSS v2 impact subscore value: \"" + impactSubscoreString + "\"");
     };
     /**
-     * @inheritdoc
+     * Generates and returns a version-specific (CVSS v2) scoring engine loaded with a vector.
+     *
+     * @param vector the vector to load in to the scoring engine
+     * @returns the loaded scoring engine
      */
-    Cvss2VectorParser.prototype.parse = function (vector) {
+    Cvss2VectorParser.prototype.generateScoringEngine = function (vector) {
         // Variable to hold vector with version prefix stripped. Strip brackets if present.
         var strippedVector = vector.replace(/^\(/, "").replace(/\)$/, "");
         // Remove version prefix if present.
@@ -286,8 +289,15 @@ var Cvss2VectorParser = /** @class */ (function () {
                     throw new RangeError("Invalid CVSS v2 vector key: \"" + sections[1] + "\"");
             }
         }
+        // Return scoring engine.
+        return cvss;
+    };
+    /**
+     * @inheritdoc
+     */
+    Cvss2VectorParser.prototype.parse = function (vector) {
         // Return computed score.
-        return cvss.computeScore();
+        return this.generateScoringEngine(vector).computeScore();
     };
     return Cvss2VectorParser;
 }());

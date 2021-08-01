@@ -1,9 +1,15 @@
 import { expect } from "chai";
 
 import {
+    Cvss2VectorMocker,
     Cvss2VectorParser,
+    Cvss2VectorPrefixOption,
+    Cvss2VectorRenderer,
+    Cvss3VectorMocker,
     Cvss3VectorParser,
-    MultiCvssVectorParser
+    Cvss3VectorPrefixOption,
+    Cvss3VectorRenderer,
+    MultiCvssVectorParser,
 } from "../src/index";
 
 
@@ -50,7 +56,7 @@ const cvss3SmokeTestVectors: Record<string, string> = {
 
 
 // Test the scoring functionality of the library.
-describe("The CVSS vector parsing and scoring library", () => {
+describe("The CVSS vector parsing and scoring functionality", () => {
 
     // Test CVSS v2 scoring functionality.
     it("should correctly compute scores for CVSS v2 vectors", () => {
@@ -90,5 +96,71 @@ describe("The CVSS vector parsing and scoring library", () => {
                 + ` ${joinedSmokeTestVectors[vector]} but instead got ${subject}.`)
                 .to.equal(joinedSmokeTestVectors[vector]);
         }
+    });
+});
+
+
+// Test the parsing and rendering functionality of the library.
+describe("The CVSS vector parsing and rendering functionality", () => {
+
+    // Parsing a CVSS v2 vector, then rendering it again should yield the same string.
+    it("should be the inverse of each other for CVSS v2 vectors", () => {
+
+        // Check that parsing and rendering are the inverse of each other by parsing, then rendering each vector.
+        const parser = new Cvss2VectorParser()
+        const renderer = new Cvss2VectorRenderer(Cvss2VectorPrefixOption.NONE);
+        for (const vector in cvss2SmokeTestVectors) {
+            const parsed = parser.generateScoringEngine(vector);
+            const rendered = renderer.render(parsed);
+            expect(vector, `Parsing and rendering were not involutive for vector '${vector}' (got '${rendered}').`)
+                .to.contain(renderer.render(parsed));
+        }
+    });
+
+    // Parsing a CVSS v3.x vector, then rendering it again should yield the same string.
+    it("should be the inverse of each other for CVSS v3.x vectors", () => {
+
+        // Check that parsing and rendering are the inverse of each other by parsing, then rendering each vector.
+        const parser = new Cvss3VectorParser()
+        const renderer = new Cvss3VectorRenderer(Cvss3VectorPrefixOption.NONE);
+        for (const vector in cvss3SmokeTestVectors) {
+            const parsed = parser.generateScoringEngine(vector);
+            const rendered = renderer.render(parsed);
+            expect(vector, `Parsing and rendering were not involutive for vector '${vector}' (got '${rendered}').`)
+                .to.contain(renderer.render(parsed));
+        }
+    });
+});
+
+
+// Test the generation functionality of the library.
+describe("The CVSS vector generation (mocking) functionality", () => {
+
+    // Generating a CVSS v2 vector should always yield a valid, scorable vector.
+    it("should always yield valid, scorable CVSS v2 vectors", () => {
+
+        // Check that we can render 1000 random, valid, scorable vectors.
+        const mocker = new Cvss2VectorMocker(true, true);
+        for (let i = 0; i < 1000; i++) {
+
+            // Mock the vector, expect validation to pass.
+            const mockedVector = mocker.generate();
+            expect(mockedVector.isValid(),
+                `The CVSS v2 mocker generated an invalid vector (${mockedVector.validate()})`).to.equal(true);
+        };
+    });
+
+    // Generating a CVSS v3.x vector should always yield a valid, scorable vector.
+    it("should always yield valid, scorable CVSS v3.x vectors", () => {
+
+        // Check that we can render 1000 random, valid, scorable vectors.
+        const mocker = new Cvss3VectorMocker(true, true);
+        for (let i = 0; i < 1000; i++) {
+
+            // Mock the vector, expect validation to pass.
+            const mockedVector = mocker.generate();
+            expect(mockedVector.isValid(),
+                `The CVSS v3.x mocker generated an invalid vector (${mockedVector.validate()})`).to.equal(true);
+        };
     });
 });

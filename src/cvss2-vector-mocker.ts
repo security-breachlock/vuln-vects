@@ -178,7 +178,7 @@ export class Cvss2VectorMocker extends CvssVectorMocker {
         scoringEngine.authentication = Cvss2VectorMocker.getRandomAuthentication();
         scoringEngine.confidentialityImpact = Cvss2VectorMocker.getRandomImpact();
         scoringEngine.integrityImpact = Cvss2VectorMocker.getRandomImpact();
-        scoringEngine.confidentialityImpact = Cvss2VectorMocker.getRandomImpact();
+        scoringEngine.availabilityImpact = Cvss2VectorMocker.getRandomImpact();
 
         // If requested, include temporal metrics.
         if (this.includeTemporal) {

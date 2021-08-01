@@ -69,7 +69,6 @@ export class Cvss3VectorMocker extends CvssVectorMocker {
      */
     private static getRandomUserInteraction(): UserInteraction {
         return CvssVectorMocker.takeRandom([
-            UserInteraction.NOT_DEFINED,
             UserInteraction.NONE,
             UserInteraction.REQUIRED,
         ]);
@@ -82,7 +81,6 @@ export class Cvss3VectorMocker extends CvssVectorMocker {
      */
     private static getRandomScope(): Scope {
         return CvssVectorMocker.takeRandom([
-            Scope.NOT_DEFINED,
             Scope.UNCHANGED,
             Scope.CHANGED,
         ]);
@@ -95,7 +93,6 @@ export class Cvss3VectorMocker extends CvssVectorMocker {
      */
     private static getRandomImpact(): Impact {
         return CvssVectorMocker.takeRandom([
-            Impact.NOT_DEFINED,
             Impact.NONE,
             Impact.LOW,
             Impact.HIGH,

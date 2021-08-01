@@ -322,13 +322,13 @@ export declare class Cvss3ScoringEngine implements CvssScoringEngine {
      *
      * @returns true if a temporal score is defined, otherwise false
      */
-    private isTemporalScoreDefined;
+    isTemporalScoreDefined(): boolean;
     /**
      * Gets whether or not an environmental score is defined.
      *
      * @returns true if an environmental score is defined, otherwise false
      */
-    private isEnvironmentalScoreDefined;
+    isEnvironmentalScoreDefined(): boolean;
     /**
      * Computes the overall score.
      *

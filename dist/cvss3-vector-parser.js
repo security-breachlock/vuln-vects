@@ -305,9 +305,12 @@ var Cvss3VectorParser = /** @class */ (function () {
         throw new RangeError("Invalid CVSS v3 security requirement value: \"" + securityRequirementString + "\"");
     };
     /**
-     * @inheritDoc
+     * Generates and returns a version-specific (CVSS v3.x) scoring engine loaded with a vector.
+     *
+     * @param vector the vector to load in to the scoring engine
+     * @returns the loaded scoring engine
      */
-    Cvss3VectorParser.prototype.parse = function (vector) {
+    Cvss3VectorParser.prototype.generateScoringEngine = function (vector) {
         // Variable to hold vector with version prefix stripped.
         var strippedVector = vector;
         // Validate version prefix if present.
@@ -402,8 +405,15 @@ var Cvss3VectorParser = /** @class */ (function () {
                     throw new RangeError("Invalid CVSS v3 vector key: \"" + sections[1] + "\"");
             }
         }
+        // Return scoring engine.
+        return cvss;
+    };
+    /**
+     * @inheritDoc
+     */
+    Cvss3VectorParser.prototype.parse = function (vector) {
         // Return computed score.
-        return cvss.computeScore();
+        return this.generateScoringEngine(vector).computeScore();
     };
     return Cvss3VectorParser;
 }());

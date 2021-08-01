@@ -233,9 +233,12 @@ export class Cvss2VectorParser implements CvssVectorParser {
     }
 
     /**
-     * @inheritdoc
+     * Generates and returns a version-specific (CVSS v2) scoring engine loaded with a vector.
+     *
+     * @param vector the vector to load in to the scoring engine
+     * @returns the loaded scoring engine
      */
-    public parse (vector: string): CvssScore {
+    public generateScoringEngine(vector: string): Cvss2ScoringEngine {
 
         // Variable to hold vector with version prefix stripped. Strip brackets if present.
         let strippedVector = vector.replace(/^\(/, "").replace(/\)$/, "");
@@ -316,7 +319,16 @@ export class Cvss2VectorParser implements CvssVectorParser {
             }
         }
 
+        // Return scoring engine.
+        return cvss;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public parse (vector: string): CvssScore {
+
         // Return computed score.
-        return cvss.computeScore();
+        return this.generateScoringEngine(vector).computeScore();
     }
 }

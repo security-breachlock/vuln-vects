@@ -72,7 +72,6 @@ var Cvss3VectorMocker = /** @class */ (function (_super) {
      */
     Cvss3VectorMocker.getRandomUserInteraction = function () {
         return cvss_vector_mocker_1.CvssVectorMocker.takeRandom([
-            cvss3_enums_1.UserInteraction.NOT_DEFINED,
             cvss3_enums_1.UserInteraction.NONE,
             cvss3_enums_1.UserInteraction.REQUIRED,
         ]);
@@ -84,7 +83,6 @@ var Cvss3VectorMocker = /** @class */ (function (_super) {
      */
     Cvss3VectorMocker.getRandomScope = function () {
         return cvss_vector_mocker_1.CvssVectorMocker.takeRandom([
-            cvss3_enums_1.Scope.NOT_DEFINED,
             cvss3_enums_1.Scope.UNCHANGED,
             cvss3_enums_1.Scope.CHANGED,
         ]);
@@ -96,7 +94,6 @@ var Cvss3VectorMocker = /** @class */ (function (_super) {
      */
     Cvss3VectorMocker.getRandomImpact = function () {
         return cvss_vector_mocker_1.CvssVectorMocker.takeRandom([
-            cvss3_enums_1.Impact.NOT_DEFINED,
             cvss3_enums_1.Impact.NONE,
             cvss3_enums_1.Impact.LOW,
             cvss3_enums_1.Impact.HIGH,

@@ -173,7 +173,7 @@ var Cvss2VectorMocker = /** @class */ (function (_super) {
         scoringEngine.authentication = Cvss2VectorMocker.getRandomAuthentication();
         scoringEngine.confidentialityImpact = Cvss2VectorMocker.getRandomImpact();
         scoringEngine.integrityImpact = Cvss2VectorMocker.getRandomImpact();
-        scoringEngine.confidentialityImpact = Cvss2VectorMocker.getRandomImpact();
+        scoringEngine.availabilityImpact = Cvss2VectorMocker.getRandomImpact();
         // If requested, include temporal metrics.
         if (this.includeTemporal) {
             scoringEngine.exploitability = Cvss2VectorMocker.getRandomExploitability();

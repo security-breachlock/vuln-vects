@@ -801,7 +801,7 @@ export class Cvss3ScoringEngine implements CvssScoringEngine {
      *
      * @returns true if a temporal score is defined, otherwise false
      */
-    private isTemporalScoreDefined (): boolean {
+    public isTemporalScoreDefined (): boolean {
         return (this._exploitCodeMaturity != ExploitCodeMaturity.NOT_DEFINED)
          || (this._remediationLevel != RemediationLevel.NOT_DEFINED)
          || (this._reportConfidence != ReportConfidence.NOT_DEFINED);
@@ -812,7 +812,7 @@ export class Cvss3ScoringEngine implements CvssScoringEngine {
      *
      * @returns true if an environmental score is defined, otherwise false
      */
-    private isEnvironmentalScoreDefined (): boolean {
+     public isEnvironmentalScoreDefined (): boolean {
         return (this._modifiedAttackVector != AttackVector.NOT_DEFINED)
          || (this._modifiedAttackComplexity != AttackComplexity.NOT_DEFINED)
          || (this._modifiedPrivilegesRequired != PrivilegesRequired.NOT_DEFINED)

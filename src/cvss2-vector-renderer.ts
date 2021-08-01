@@ -62,8 +62,8 @@ export class Cvss2VectorRenderer {
     get prefixOption(): Cvss2VectorPrefixOption {
         return this._prefixOption;
     }
-    set prefixOption(includeTemporal: Cvss2VectorPrefixOption) {
-        this._prefixOption = includeTemporal;
+    set prefixOption(prefixOption: Cvss2VectorPrefixOption) {
+        this._prefixOption = prefixOption;
     }
 
     /**
@@ -82,7 +82,7 @@ export class Cvss2VectorRenderer {
                 return 'A';
         }
 
-        // Should never happen.
+        // Should never happen thanks to validation before call.
         throw new RangeError('Encountered unexpected access vector value during vector rendering.');
     }
 
@@ -102,7 +102,7 @@ export class Cvss2VectorRenderer {
                 return 'L';
         }
 
-        // Should never happen.
+        // Should never happen thanks to validation before call.
         throw new RangeError('Encountered unexpected access complexity value during vector rendering.');
     }
 
@@ -122,7 +122,7 @@ export class Cvss2VectorRenderer {
                 return 'N';
         }
 
-        // Should never happen.
+        // Should never happen thanks to validation before call.
         throw new RangeError('Encountered unexpected authentication value during vector rendering.');
     }
 
@@ -142,12 +142,12 @@ export class Cvss2VectorRenderer {
                 return 'C';
         }
 
-        // Should never happen.
+        // Should never happen thanks to validation before call.
         throw new RangeError('Encountered unexpected impact value during vector rendering.');
     }
 
     /**
-     * Converts a exploitability enum value into its string representation.
+     * Converts an exploitability enum value into its string representation.
      *
      * @param exploitability the enum value to convert
      * @returns the converted string
@@ -186,7 +186,6 @@ export class Cvss2VectorRenderer {
             case RemediationLevel.UNAVAILABLE:
                 return "U";
         }
-        return ''; // Never returned.
     }
 
     /**

@@ -1,9 +1,6 @@
-// Version-independent scoring.
 import { CvssScoringEngine, roundUp } from "./cvss-scoring";
 import { CvssScore } from "./cvss-score";
 import { ScoreValidationError } from "./score-validation-error";
-
-// Lots of imports to handle here from the enum file.
 import {
     AttackVector,
     AttackComplexity,

@@ -10,9 +10,7 @@ import {
     SecurityRequirement,
     UserInteraction,
 } from "./cvss3-enums";
-
 import { CvssVectorMocker } from "./cvss-vector-mocker";
-
 import { Cvss3ScoringEngine } from "./cvss3-scoring-engine";
 
 

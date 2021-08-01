@@ -10,9 +10,7 @@ import {
     ReportConfidence,
     TargetDistribution,
 } from "./cvss2-enums";
-
 import { CvssVectorMocker } from "./cvss-vector-mocker";
-
 import { Cvss2ScoringEngine } from "./cvss2-scoring-engine";
 
 

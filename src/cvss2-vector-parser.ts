@@ -1,9 +1,6 @@
-// Vulnerability scoring.
 import { CvssScore } from "./cvss-score";
 import { Cvss2ScoringEngine } from "./cvss2-scoring-engine";
 import { CvssVectorParser } from "./cvss-vector-parser";
-
-// Lots of imports to handle here from the enum file.
 import {
     AccessComplexity,
     AccessVector,

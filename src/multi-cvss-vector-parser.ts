@@ -1,4 +1,3 @@
-// Vulnerability scoring.
 import { CvssScore } from "./cvss-score";
 import { CvssVectorParser } from "./cvss-vector-parser";
 import { Cvss2VectorParser } from "./cvss2-vector-parser";

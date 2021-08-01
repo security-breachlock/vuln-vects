@@ -171,7 +171,7 @@ export class Cvss2VectorMocker extends CvssVectorMocker {
      */
     public generate(): Cvss2ScoringEngine {
 
-        // Base metrics must also be included
+        // Base metrics must be included
         const scoringEngine = new Cvss2ScoringEngine();
         scoringEngine.accessVector = Cvss2VectorMocker.getRandomAccessVector();
         scoringEngine.accessComplexity = Cvss2VectorMocker.getRandomAccessComplexity();

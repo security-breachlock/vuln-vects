@@ -63,6 +63,8 @@ Usage of the library will vary, depending on whether you want to run in-browser 
 npm install --save vuln-vects
 ```
 
+If you want to do a deep dive on the functionality of the library, take a look at [the full API documentation](https://security-breachlock.github.io/vuln-vects/api).
+
 ### In the browser
 Usage in the browser is super straightforward. After installation, simply import the bundled library into your webpage like so:
 

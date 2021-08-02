@@ -1,4 +1,7 @@
 # Vuln/Vects
+
+![CI](https://github.com/security-breachlock/vuln-vects/actions/workflows/main.yml/badge.svg)
+
 A powerful, flexible CVSS parser, calculator and validator written for JavaScript/TypeScript.
 
 ![Logo](logo-readme.svg)

@@ -183,3 +183,9 @@ console.log(randomCvss3Vector());
 // Temporal/environmental scores and any valid prefixing scheme are supported:
 console.log(randomCvss2Vector(true, true, Cvss2VectorPrefixOption.BRACKETED));
 ```
+
+## Acknowledgements
+The main contributors to this project so far are as follows:
+
+* Saul Johnson (@lambdacasserole)
+* Sai Srinivas (@saikop99)

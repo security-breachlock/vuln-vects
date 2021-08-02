@@ -8,7 +8,7 @@
     "build": "tsc --build",
     "test": "mocha -r ts-node/register **/test/**/*.test.ts",
     "bundle": "webpack",
-    "docs": "typedoc src/index.ts src/*-enums.ts --out docs"
+    "docs": "typedoc src/index.ts src/*-enums.ts --out docs/api"
   },
   "repository": {
     "type": "git",

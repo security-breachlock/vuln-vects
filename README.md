@@ -38,7 +38,7 @@ Build output is to `/dist`. To build accompanying documentation, you need the fo
 npm run docs
 ```
 
-Documentation is generated using [TypeDoc](https://typedoc.org/) and rendered as HTML to `/docs`.
+Documentation is generated using [TypeDoc](https://typedoc.org/) and rendered as HTML to `/docs/api`.
 
 ## Bundling
 You'll need to bundle the library if you want to use it in-browser (remember to build it first):

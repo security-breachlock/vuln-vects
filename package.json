@@ -1,6 +1,6 @@
 {
   "name": "vuln-vects",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A powerful, flexible CVSS parser, calculator and validator written for JavaScript/TypeScript.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -16,10 +16,13 @@
   },
   "keywords": [
     "typescript",
-    "template",
-    "gulp",
-    "testing",
-    "mocha"
+    "cvss",
+    "common",
+    "vulnerability",
+    "scoring",
+    "system",
+    "security",
+    "cyber"
   ],
   "author": "BreachLock Inc. <security@breachlock.com>",
   "license": "MIT",

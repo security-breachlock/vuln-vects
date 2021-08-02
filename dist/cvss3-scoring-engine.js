@@ -1,11 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cvss3ScoringEngine = void 0;
-// Version-independent scoring.
 var cvss_scoring_1 = require("./cvss-scoring");
 var cvss_score_1 = require("./cvss-score");
 var score_validation_error_1 = require("./score-validation-error");
-// Lots of imports to handle here from the enum file.
 var cvss3_enums_1 = require("./cvss3-enums");
 /**
  * Implements a service offering CVSS v3 vulnerability scoring.

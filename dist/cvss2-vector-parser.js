@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cvss2VectorParser = void 0;
 var cvss2_scoring_engine_1 = require("./cvss2-scoring-engine");
-// Lots of imports to handle here from the enum file.
 var cvss2_enums_1 = require("./cvss2-enums");
 /**
  * Implements a service offering CVSS v2 vector parsing.

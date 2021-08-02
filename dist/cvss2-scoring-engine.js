@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cvss2ScoringEngine = void 0;
 var cvss_score_1 = require("./cvss-score");
 var score_validation_error_1 = require("./score-validation-error");
-// Lots of imports to handle here from the enum file.
 var cvss2_enums_1 = require("./cvss2-enums");
 /**
  * Implements a service offering CVSS v2 vulnerability scoring.

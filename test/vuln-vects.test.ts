@@ -52,6 +52,7 @@ const cvss3SmokeTestVectors: Record<string, string> = {
     'CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H': '7.5', // CVE-2021-29725
     'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H': '7.5',
     'AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H': '7.5',
+    'AV:A/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:H/E:P/RL:T/RC:C/MAV:N/MAC:H/MPR:X/MUI:R/MS:U/MC:L/MI:N/MA:N/CR:H/IR:L/AR:L': '3.2'
 }
 
 

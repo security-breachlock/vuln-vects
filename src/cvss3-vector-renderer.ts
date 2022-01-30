@@ -114,6 +114,8 @@ export class Cvss3VectorRenderer {
      */
     private static renderPrivilegesRequired(privilegesRequired: PrivilegesRequired): string {
         switch (privilegesRequired) {
+            case PrivilegesRequired.NOT_DEFINED:
+                return 'X';
             case PrivilegesRequired.HIGH:
                 return 'H';
             case PrivilegesRequired.LOW:

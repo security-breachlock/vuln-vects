@@ -415,6 +415,7 @@ export class Cvss3VectorParser implements CvssVectorParser {
                     break;
                 case "MS":
                     cvss.modifiedScope = Cvss3VectorParser.parseModifiedScope(sections[1]);
+                    break;
                 case "MC":
                     cvss.modifiedConfidentialityImpact = Cvss3VectorParser.parseModifiedImpact(sections[1]);
                     break;

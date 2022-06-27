@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MultiCvssVectorParser = void 0;
 var cvss2_vector_parser_1 = require("./cvss2-vector-parser");
 var cvss3_vector_parser_1 = require("./cvss3-vector-parser");
 /**

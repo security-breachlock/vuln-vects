@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CvssVectorMocker = void 0;
 /**
  * An abstract mocking service for generating random CVSS vectors.
  *
@@ -29,7 +28,7 @@ var CvssVectorMocker = /** @class */ (function () {
         set: function (includeTemporal) {
             this._includeTemporal = includeTemporal;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(CvssVectorMocker.prototype, "includeEnvironmental", {
@@ -42,7 +41,7 @@ var CvssVectorMocker = /** @class */ (function () {
         set: function (includeEnvironmental) {
             this._includeEnvironmental = includeEnvironmental;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     /**

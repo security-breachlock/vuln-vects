@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.randomCvss3Vector = exports.randomCvss2Vector = exports.validateCvssVector = exports.validateCvss3Vector = exports.validateCvss2Vector = exports.parseCvssVector = exports.parseCvss3Vector = exports.parseCvss2Vector = exports.MultiCvssVectorParser = exports.Cvss3VectorRenderer = exports.Cvss3VectorPrefixOption = exports.Cvss3VectorMocker = exports.Cvss3VectorParser = exports.Cvss3ScoringEngine = exports.Cvss2VectorRenderer = exports.Cvss2VectorPrefixOption = exports.Cvss2VectorMocker = exports.Cvss2VectorParser = exports.Cvss2ScoringEngine = exports.CvssScore = exports.cvss3 = exports.cvss2 = void 0;
 var cvss2_vector_parser_1 = require("./cvss2-vector-parser");
 var cvss2_vector_renderer_1 = require("./cvss2-vector-renderer");
 var cvss2_vector_mocker_1 = require("./cvss2-vector-mocker");
@@ -10,32 +9,32 @@ var cvss3_vector_renderer_1 = require("./cvss3-vector-renderer");
 var cvss3_vector_mocker_1 = require("./cvss3-vector-mocker");
 // Export enums.
 var cvss2_enums_1 = require("./cvss2-enums");
-Object.defineProperty(exports, "cvss2", { enumerable: true, get: function () { return cvss2_enums_1.enums; } });
+exports.cvss2 = cvss2_enums_1.enums;
 var cvss3_enums_1 = require("./cvss3-enums");
-Object.defineProperty(exports, "cvss3", { enumerable: true, get: function () { return cvss3_enums_1.enums; } });
+exports.cvss3 = cvss3_enums_1.enums;
 // Export classes (score object, scoring engines and parsers).
 var cvss_score_1 = require("./cvss-score");
-Object.defineProperty(exports, "CvssScore", { enumerable: true, get: function () { return cvss_score_1.CvssScore; } });
+exports.CvssScore = cvss_score_1.CvssScore;
 var cvss2_scoring_engine_1 = require("./cvss2-scoring-engine");
-Object.defineProperty(exports, "Cvss2ScoringEngine", { enumerable: true, get: function () { return cvss2_scoring_engine_1.Cvss2ScoringEngine; } });
+exports.Cvss2ScoringEngine = cvss2_scoring_engine_1.Cvss2ScoringEngine;
 var cvss2_vector_parser_2 = require("./cvss2-vector-parser");
-Object.defineProperty(exports, "Cvss2VectorParser", { enumerable: true, get: function () { return cvss2_vector_parser_2.Cvss2VectorParser; } });
+exports.Cvss2VectorParser = cvss2_vector_parser_2.Cvss2VectorParser;
 var cvss2_vector_mocker_2 = require("./cvss2-vector-mocker");
-Object.defineProperty(exports, "Cvss2VectorMocker", { enumerable: true, get: function () { return cvss2_vector_mocker_2.Cvss2VectorMocker; } });
+exports.Cvss2VectorMocker = cvss2_vector_mocker_2.Cvss2VectorMocker;
 var cvss2_vector_renderer_2 = require("./cvss2-vector-renderer");
-Object.defineProperty(exports, "Cvss2VectorPrefixOption", { enumerable: true, get: function () { return cvss2_vector_renderer_2.Cvss2VectorPrefixOption; } });
-Object.defineProperty(exports, "Cvss2VectorRenderer", { enumerable: true, get: function () { return cvss2_vector_renderer_2.Cvss2VectorRenderer; } });
+exports.Cvss2VectorPrefixOption = cvss2_vector_renderer_2.Cvss2VectorPrefixOption;
+exports.Cvss2VectorRenderer = cvss2_vector_renderer_2.Cvss2VectorRenderer;
 var cvss3_scoring_engine_1 = require("./cvss3-scoring-engine");
-Object.defineProperty(exports, "Cvss3ScoringEngine", { enumerable: true, get: function () { return cvss3_scoring_engine_1.Cvss3ScoringEngine; } });
+exports.Cvss3ScoringEngine = cvss3_scoring_engine_1.Cvss3ScoringEngine;
 var cvss3_vector_parser_2 = require("./cvss3-vector-parser");
-Object.defineProperty(exports, "Cvss3VectorParser", { enumerable: true, get: function () { return cvss3_vector_parser_2.Cvss3VectorParser; } });
+exports.Cvss3VectorParser = cvss3_vector_parser_2.Cvss3VectorParser;
 var cvss3_vector_mocker_2 = require("./cvss3-vector-mocker");
-Object.defineProperty(exports, "Cvss3VectorMocker", { enumerable: true, get: function () { return cvss3_vector_mocker_2.Cvss3VectorMocker; } });
+exports.Cvss3VectorMocker = cvss3_vector_mocker_2.Cvss3VectorMocker;
 var cvss3_vector_renderer_2 = require("./cvss3-vector-renderer");
-Object.defineProperty(exports, "Cvss3VectorPrefixOption", { enumerable: true, get: function () { return cvss3_vector_renderer_2.Cvss3VectorPrefixOption; } });
-Object.defineProperty(exports, "Cvss3VectorRenderer", { enumerable: true, get: function () { return cvss3_vector_renderer_2.Cvss3VectorRenderer; } });
+exports.Cvss3VectorPrefixOption = cvss3_vector_renderer_2.Cvss3VectorPrefixOption;
+exports.Cvss3VectorRenderer = cvss3_vector_renderer_2.Cvss3VectorRenderer;
 var multi_cvss_vector_parser_2 = require("./multi-cvss-vector-parser");
-Object.defineProperty(exports, "MultiCvssVectorParser", { enumerable: true, get: function () { return multi_cvss_vector_parser_2.MultiCvssVectorParser; } });
+exports.MultiCvssVectorParser = multi_cvss_vector_parser_2.MultiCvssVectorParser;
 /**
  * Parses a CVSS v2 vector and returns the resulting score object.
  *

@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.enums = exports.SecurityRequirement = exports.ReportConfidence = exports.RemediationLevel = exports.ExploitCodeMaturity = exports.Impact = exports.Scope = exports.UserInteraction = exports.PrivilegesRequired = exports.AttackComplexity = exports.AttackVector = void 0;
 /**
  * An enumeration of possible attack vectors associated with a vulnerability.
  *

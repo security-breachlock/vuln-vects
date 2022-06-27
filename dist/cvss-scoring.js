@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.roundUp = void 0;
 /**
  * Rounds the floating point value up to its nearest multiple of 0.1 (i.e. to one decimal place).
  *

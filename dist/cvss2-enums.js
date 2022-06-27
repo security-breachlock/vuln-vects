@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.enums = exports.TargetDistribution = exports.ReportConfidence = exports.RemediationLevel = exports.Impact = exports.ImpactSubscore = exports.Exploitability = exports.CollateralDamagePotential = exports.Authentication = exports.AccessComplexity = exports.AccessVector = void 0;
 /**
  * An enumeration of possible access vectors associated with a vulnerability.
  *

@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cvss2VectorParser = void 0;
 var cvss2_scoring_engine_1 = require("./cvss2-scoring-engine");
 var cvss2_enums_1 = require("./cvss2-enums");
 /**

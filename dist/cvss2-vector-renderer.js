@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cvss2VectorRenderer = exports.Cvss2VectorPrefixOption = void 0;
 var cvss2_enums_1 = require("./cvss2-enums");
 /**
  * Represents a prefixing option for CVSS v2 vectors.
@@ -48,7 +47,7 @@ var Cvss2VectorRenderer = /** @class */ (function () {
         set: function (prefixOption) {
             this._prefixOption = prefixOption;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     /**

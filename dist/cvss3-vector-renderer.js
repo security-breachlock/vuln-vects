@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cvss3VectorRenderer = exports.Cvss3VectorPrefixOption = void 0;
 var cvss3_enums_1 = require("./cvss3-enums");
 /**
  * Represents a prefixing option for CVSS v3.x vectors.
@@ -48,7 +47,7 @@ var Cvss3VectorRenderer = /** @class */ (function () {
         set: function (prefixOption) {
             this._prefixOption = prefixOption;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     /**
@@ -95,6 +94,8 @@ var Cvss3VectorRenderer = /** @class */ (function () {
      */
     Cvss3VectorRenderer.renderPrivilegesRequired = function (privilegesRequired) {
         switch (privilegesRequired) {
+            case cvss3_enums_1.PrivilegesRequired.NOT_DEFINED:
+                return 'X';
             case cvss3_enums_1.PrivilegesRequired.HIGH:
                 return 'H';
             case cvss3_enums_1.PrivilegesRequired.LOW:
